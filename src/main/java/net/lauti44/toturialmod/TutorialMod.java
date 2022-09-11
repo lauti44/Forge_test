@@ -1,6 +1,7 @@
 package net.lauti44.toturialmod;
 
 import com.mojang.logging.LogUtils;
+import net.lauti44.toturialmod.block.ModBlocks;
 import net.lauti44.toturialmod.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,6 +24,8 @@ public class TutorialMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
